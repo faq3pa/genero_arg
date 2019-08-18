@@ -3,7 +3,7 @@ import time
 import csv
 
 start = time.time()
-file = open('data/names.csv')
+file = open('data/names.csv', encoding="utf8")
 names = {}
 for i in file:
     data = i.split(',')
@@ -24,7 +24,7 @@ def gender(name):
     return ('IDK')
 
 def gendercsv(INPUT):
-    with open(INPUT, "r") as f_in, open('output.csv', 'w') as f_out:
+    with open(INPUT, "r", encoding="utf8") as f_in, open('output.csv', 'w', encoding="utf8") as f_out:
         header = f_in.readline()
         header = header.rstrip()+",gender"
         f_out.write(header+'\n')
