@@ -16,6 +16,8 @@ for i in file:
 file.close()
 
 def gender(name):
+    if name is "":
+        return('null')
     name = name.replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u')
     if name.capitalize() in names.keys():
         return (names[name.capitalize()])
