@@ -30,13 +30,16 @@ def gendercsv(INPUT):
         f_out.write(header+'\n')
         reader = csv.reader(f_in) 
         writer = csv.writer(f_out) 
-        for row in reader: 
-            person = row[1] 
-            person = person.split(' ', 1)[0] 
-            print(person)
-            gender_info=gender(person)
-            row.extend([gender_info]) 
-            writer.writerow(row)
+        for row in reader:
+            if row == []:
+                writer.writerow(row)
+            else:
+                person = row[0] 
+                person = person.split(' ', 1)[0] 
+                print(person)
+                gender_info=gender(person)
+                row.extend([gender_info]) 
+                writer.writerow(row)
     end = time.time()
     print(end - start,'seconds to process')
     return
