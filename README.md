@@ -1,6 +1,12 @@
 Género_Arg
 ======================
 
+Para correr el programa desde línea de comando, solo vamos a necesitar un archivo CSV que vamos a leer como input. Como resultado obtendremos un archivo *'output.csv'*. Ejemplo:
+
+`
+python3 genero_arg.py --input 'test.csv'
+`
+
 Dentro del programa se encuentran dos funciones:
 
 ***Género:*** Identifica género a partir del primer nombre de la persona. La base utilizada para inferir género fue obtenida utilizando el [Registro Civil de la Ciudad de Buenos Aires](http://www.buenosaires.gob.ar/areas/registrocivil/nombres/busqueda/buscador_nombres.php?menu_id=16082).
