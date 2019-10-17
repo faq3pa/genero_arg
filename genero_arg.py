@@ -13,7 +13,7 @@ def gender(name):
 def gendercsv(INPUT):
     with open(INPUT, "r", encoding="utf8") as f_in, open('output.csv', 'w', encoding="utf8") as f_out:
         header = f_in.readline()
-        header = header.rstrip()+",gender"
+        header = header.rstrip()+",Genero"
         f_out.write(header+'\n')
         reader = csv.reader(f_in) 
         writer = csv.writer(f_out) 
@@ -43,11 +43,11 @@ def main():
     for i in file:
         data = i.split(',')
         if data[1] =='F\n':
-    	    names.update({data[0]:'Female'})
+    	    names.update({data[0]:'Femenino'})
         elif data[1] =='M\n':
-    	    names.update({data[0]:'Male'})
+    	    names.update({data[0]:'Masculino'})
         else:
-    	    names.update({data[0]:'Andy'})
+    	    names.update({data[0]:'Ambos'})
     file.close()
     gendercsv(INP)
     end = time.time()
