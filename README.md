@@ -1,7 +1,7 @@
 Género_Arg
 ======================
 
-Para correr el programa desde línea de comando, solo vamos a necesitar un archivo CSV que vamos a leer como input. Como resultado obtendremos un archivo *'output.csv'*. Ejemplo:
+Para correr el programa desde línea de comando, sólo vamos a necesitar un archivo CSV que vamos a leer como input. Como resultado obtendremos un archivo *'output.csv'*. Ejemplo:
 
 `
 python3 genero_arg.py --input 'test.csv'
