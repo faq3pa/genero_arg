@@ -11,7 +11,7 @@ def gender(name):
     return ('IDK')
 
 def gendercsv(INPUT):
-    with open(INPUT, "r", encoding="utf8") as f_in, open('output.csv', 'w', encoding="utf8") as f_out:
+    with open(INPUT, "r", encoding="utf8") as f_in, open('output.csv', 'w', encoding="utf8", newline="") as f_out:
         header = f_in.readline()
         header = header.rstrip()+",Genero"
         f_out.write(header+'\n')
